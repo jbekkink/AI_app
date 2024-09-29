@@ -5,8 +5,8 @@ import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 const AppBox = (props) => {
 
     return (
-        <div className={`border border-1 bg-white rounded-lg font-semibold text-gray-700 shadow-sm hover:shadow-md
-        cursor-pointer h-48 transition duration-200 ease-in-out relative transform hover:border-yellow-500`}>
+        <div className={`border-solid border-white border-2 bg-white rounded-lg font-semibold text-gray-700 shadow-sm
+        cursor-pointer h-48 transition duration-200 ease-in-out relative transform hover:border-yellow `}>
             <div className='absolute bottom-2 w-full'>
                 <div className='relative flex justify-between items-center px-4'>
                     <div>
