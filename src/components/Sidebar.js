@@ -21,18 +21,19 @@ function SideBar(props) {
     return (
         <div className='fixed flex h-full w-full sm:w-60 flex-col justify-between transform -translate-x-full sm:translate-x-0 border-r border-gray-200 bg-gray-50 p-4 transition-all duration-200'>
             <div className='flex flex-col gap-6'>
+                
                 <div className='flex gap-2 whitespace-nowrap items-center'>
                     <Image src={logo} alt="iExec Logo" className='w-32'/>
                 </div>
                 <div className='grid gap-2'>
+                    <Link href='/ai'>
+                        <div className='flex items-center p-2 ease-in-out hover:bg-gray-200 rounded-md font-semibold text-black'>AI Apps</div>
+                    </Link>
                     <Link href='/'>
                         <div className='flex items-center p-2 ease-in-out hover:bg-gray-200 rounded-md font-semibold text-black'>My Data</div>
                     </Link>
                     <Link href='/protect'>
                         <div className='flex items-center p-2 ease-in-out hover:bg-gray-200 rounded-md font-semibold text-black'>Protect Data</div>
-                    </Link>
-                    <Link href='/email'>
-                        <div className='flex items-center p-2 ease-in-out hover:bg-gray-200 rounded-md font-semibold text-black'>Send email</div>
                     </Link>
                 </div>   
             </div>

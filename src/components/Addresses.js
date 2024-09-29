@@ -50,12 +50,12 @@ const Addresses = (props) => {
 
     return (
         <div className='w-full flex flex-col gap-3'>
-            <h2 className='text-2xl'>Addresses with access</h2>
+            <h2 className='text-2xl'>Apps with access</h2>
             {addressList && addressList.length > 0 && addressList.map((data, index) => (
                 <div className='w-full border border-opacity-20 rounded-md shadow-md p-3'>
                     <div className='flex justify-between flex-col md:flex-row text-sm md:text-base md:items-center'>
                         <div className='flex flex-col'>
-                            <div className='font-semibold'>{data.requesterrestrict}</div>
+                            <div className='font-semibold'>{data.apprestrict}</div>
                             <div className=''>Access price: <span className='font-semibold text-emerald-600'>{data.datasetprice} RLC</span></div>
                         </div>
                         <div onClick={() => revokeAccessFunc(data)}><IExecButton>Revoke Access</IExecButton></div>
