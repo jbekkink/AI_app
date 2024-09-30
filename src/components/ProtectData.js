@@ -22,7 +22,7 @@ import "react-toastify/dist/ReactToastify.css";
 const protectDataFunc = async (data, name) => {
     const result = getAccount();
     const provider = await result.connector?.getProvider();
-    const dataProtector = new IExecDataProtector(provider);
+    const dataProtector = new IExecDataProtector(provider, {iexecOptions: { smsURL: 'https://sms.scone-debug.v8-bellecour.iex.ec' }});
     const { address } = await dataProtector.protectData({data,name});
     return address;
   };
