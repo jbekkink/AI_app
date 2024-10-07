@@ -26,7 +26,7 @@ const Overview = (props) => {
         try{
             const result = getAccount();
             let provider = await result.connector?.getProvider();
-            const dataProtector = new IExecDataProtector(provider);
+            const dataProtector = new IExecDataProtector(provider, {iexecOptions: { smsURL: 'https://sms.scone-debug.v8-bellecour.iex.ec' }});
             const listProtectedData = await dataProtector.fetchProtectedData({
             owner: result.address
             });

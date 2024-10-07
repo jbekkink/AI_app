@@ -13,7 +13,7 @@ const Addresses = (props) => {
         try{
             const result = getAccount();
             const provider = await result.connector?.getProvider();
-            let dataProtector = new IExecDataProtector(provider);
+            let dataProtector = new IExecDataProtector(provider, {iexecOptions: { smsURL: 'https://sms.scone-debug.v8-bellecour.iex.ec' }});
             const listProtectedData = await dataProtector.fetchGrantedAccess({
                 protectedData: address
             })
@@ -27,7 +27,7 @@ const Addresses = (props) => {
         try {
             const result = getAccount();
             const provider = await result.connector?.getProvider();
-            const dataProtector = new IExecDataProtector(provider);
+            const dataProtector = new IExecDataProtector(provider, {iexecOptions: { smsURL: 'https://sms.scone-debug.v8-bellecour.iex.ec' }});
             await dataProtector.revokeOneAccess(protectedData);
             props.setRefresh(true);
             toast.success('Successfully revoked access!');
